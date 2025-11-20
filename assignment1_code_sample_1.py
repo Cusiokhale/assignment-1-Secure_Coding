@@ -6,17 +6,14 @@ from email.mime.text import MIMEText
 
 # Load database configuration from environment variables
 db_config = {
-    'host': os.getenv('DB_HOST', 'mydatabase.com'),
-    'user': os.getenv('DB_USER', 'admin'),
-    'password': os.getenv('DB_PASSWORD', 'secret123')  # In production, ensure this is set securely
+    'host': 'mydatabase.com',
+    'user': 'admin',
+    'password': 'secret1234'
 }
 
 def get_user_input():
-    # Sanitize user input to prevent injection or harmful characters
-    user_input = input('Enter your name: ')
-    # Remove potentially dangerous characters (e.g., shell metacharacters)
-    sanitized_input = ''.join(c for c in user_input if c.isalnum() or c in ' ')
-    return sanitized_input
+    user_input = input('Enter gggggg name: ')
+    return user_input
 
 def send_email(to, subject, body):
     # Use smtplib for secure email sending instead of system commands
