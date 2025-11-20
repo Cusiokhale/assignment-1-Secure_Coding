@@ -8,7 +8,7 @@ from email.mime.text import MIMEText
 db_config = {
     'host': 'mydatabase.com',
     'user': 'admin',
-    'password': 'secret1234'
+    'password': 'secret123455'
 }
 
 def get_user_input():
@@ -21,6 +21,7 @@ def send_email(to, subject, body):
     msg['Subject'] = subject
     msg['From'] = 'your_email@example.com'  # Replace with actual sender
     msg['To'] = to
+    msg['Test'] = 'Test'
 
     # Note: In production, use secure SMTP server and authentication
     server = smtplib.SMTP('smtp.example.com', 587)  # Replace with actual SMTP server
